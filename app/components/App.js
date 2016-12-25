@@ -1,8 +1,11 @@
 import React from 'react';
+import TaskList from './TaskList';
 
 const App = () => {
   return (
-    <div className="my-app">This comes from the App folder!</div>
+    <div className="my-app" style={{marginTop: '50px'}}>
+      <TaskList />
+    </div>
   );
 };
 

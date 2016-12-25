@@ -18,7 +18,7 @@ class TaskList extends Component {
       <div>
         <h2>List of tasks:</h2>
         {this.props.tasks.map(task => {
-          return <Task key={task.taskID} nombreTarea={task.taskName} />;
+          return <Task key={task.taskID} nombreTarea={task.taskName} colorTarea={task.taskColor}/>;
         })}
 
       </div>

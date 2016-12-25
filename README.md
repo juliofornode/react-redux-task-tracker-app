@@ -31,7 +31,7 @@
 
 
 
-# Using: Performance-optimized Boilerplate for React Apps using Webpack, Redux, Mocha, Chai and Enzyme
+# Using: Performance-optimized Boilerplate for React Apps with Webpack, Redux, Mocha, Chai and Enzyme
 
 ### Webpack
 * Module packaging

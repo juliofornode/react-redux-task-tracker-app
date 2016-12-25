@@ -1,4 +1,37 @@
-# Performance-optimized Boilerplate for React Apps using Webpack, Redux, Mocha, Chai and Enzyme
+# React-Redux App to track task status
+
+## Goal
+* TODO app
+* Each task has three phases that have to be completed in order to close the task
+
+## React Components
+* Apps
+* TaskList
+* Task
+
+## Redux Actions
+* Create new task
+* Update task
+
+## Redux Reducers
+* Tasks
+
+## Redux state
+* Task: object
+* TaskList: array of objects
+
+## Model
+* JSON file
+
+## Enzyme: functionality to test
+* Display list of tasks
+* Create new task
+* Update task
+
+
+
+
+# Using: Performance-optimized Boilerplate for React Apps using Webpack, Redux, Mocha, Chai and Enzyme
 
 ### Webpack
 * Module packaging

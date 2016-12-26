@@ -29,6 +29,16 @@
 * Update task
 
 
+# Log
+* Basic components: App, TaskList, Task
+* Basic redux implementation: loadTasks action, tasksReducer
+* Basic task status functionality: colored circles and button.
+
+* Integrate status functionality with redux: update color state.
+
+
+
+
 
 
 # Using: Performance-optimized Boilerplate for React Apps with Webpack, Redux, Mocha, Chai and Enzyme

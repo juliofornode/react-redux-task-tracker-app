@@ -16,6 +16,7 @@ class ColorRank extends Component {
     if(posicion < colores.length - 1 ) {
       this.setState({ colorSet: colores[posicion + 1] });
     }
+
   }
   render() {
     if(!this.state.colorSet) {
@@ -26,7 +27,7 @@ class ColorRank extends Component {
           <svg width="40" height="40">
             <circle cx="20" cy="20" r="19" stroke="gray" strokeWidth="1" fill={this.state.colorSet} />
           </svg>
-          <button onClick={this.changeColor} className="btn btn-default" style={{position: 'relative', bottom: '15px', left: '10px'}}>Next Stage</button>
+          <button onClick={this.changeColor} className="btn btn-default" style={{position: 'relative', bottom: '15px', left: '25px'}}>Next Stage</button>
         </div>
       );
     }

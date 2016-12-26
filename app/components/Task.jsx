@@ -1,4 +1,5 @@
 import React, {Component, PropTypes} from 'react';
+import ColorRank from './ColorRank';
 
 class Task extends Component {
   render() {
@@ -10,11 +11,7 @@ class Task extends Component {
               <div className="col-md-9">
                 {this.props.nombreTarea}
               </div>
-              <div className="col-md-3">
-                <svg width="40" height="40">
-                  <circle cx="20" cy="20" r="19" stroke="gray" strokeWidth="1" fill={this.props.colorTarea} />
-                </svg>
-              </div>
+              <ColorRank colorRank={this.props.colorTarea}/>
             </div>
           </div>
 

@@ -18,7 +18,7 @@ export default function(state=[], action) {
     });
   case 'UPDATE_TASK':
     return state.map(task => {
-      if(task.taskName === action.taskName) {
+      if(task.taskName === action.oldName) {
         return action.editedTask;
       } else {
         return task;

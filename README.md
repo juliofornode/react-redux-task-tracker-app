@@ -57,6 +57,11 @@
  * Part one: isolate editing in Component state
  * Part two: isolate UpdateTask Component
 
+* Error logging:
+ * if we do not update the task, editedTask reaches the reducer -- FIXED
+ * if we update the task, editedTask does not reach the reducer -- FIXED
+ * if we do not update the task, it results an empty task
+
 
 
 

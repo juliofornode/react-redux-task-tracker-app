@@ -45,10 +45,10 @@ export function deleteTask(taskName) {
   };
 }
 
-export function updateTask(taskName, editedTask) {
+export function updateTask(oldName, editedTask) {
   return {
     type: 'UPDATE_TASK',
-    taskName: taskName,
+    oldName: oldName,
     editedTask: editedTask
   };
 }

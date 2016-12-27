@@ -19,27 +19,25 @@ class UpdateTask extends Component {
 
   handleSubmit(eventObject) {
     eventObject.preventDefault();
-    let editedTask = this.state.task;
-    this.props.updateTask(editedTask.taskName, editedTask);
-    this.setState({ task: {taskID: ''} });
-    this.setState({ task: {taskName: ''} });
-    this.setState({ task: {taskColor: ''} });
-    this.setState({ editing: false });
+    this.props.updateTask(this.props.taskName, this.state);
+    this.setState({taskID: ''});
+    this.setState({taskName: ''});
+    this.setState({taskColor: ''});
   }
 
   handleChangeID(eventObject) {
     let nuevaID = eventObject.target.value;
-    this.setState({ task: {taskID: nuevaID} });
+    this.setState({taskID: nuevaID});
   }
 
   handleChangeName(eventObject) {
     let nuevoName = eventObject.target.value;
-    this.setState({ task: {taskName: nuevoName} });
+    this.setState({taskName: nuevoName});
   }
 
   handleChangeColor(eventObject) {
     let nuevoColor = eventObject.target.value;
-    this.setState({ task: {taskColor: nuevoColor} });
+    this.setState({taskColor: nuevoColor});
   }
   render() {
     return(

@@ -37,8 +37,16 @@
  * input onChange: update this.state.currentTask with eventObject.target.value
  * form onSubmit: call preventDefault(), call updateTask(currentTask), empty this.state.currentTask
  * updateTask action: map through the state to find the item, then update the color field
-
 * Create new task
+ * component: form
+ * action: createTask
+ * reducer: add the new task object to state array
+
+* Delete a task
+
+
+
+
 
 
 

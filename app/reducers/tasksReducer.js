@@ -10,6 +10,8 @@ export default function(state=[], action) {
         return item;
       }
     });
+  case 'CREATE_TASK':
+    return [...state, action.payload];
   default:
     return state;
   }

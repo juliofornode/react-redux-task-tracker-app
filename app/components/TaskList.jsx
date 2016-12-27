@@ -21,7 +21,7 @@ class TaskList extends Component {
     } else {
       return (
         <div>
-          <h2>List of tasks:</h2>
+          <h3>List of tasks:</h3>
           {this.props.tasks.map(task => {
             return <Task key={task.taskID} {...task} />;
           })}

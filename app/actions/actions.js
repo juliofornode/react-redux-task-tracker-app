@@ -31,3 +31,10 @@ export function updateColor(taskName, newColor) {
     newColor: newColor
   };
 }
+
+export function createTask(newTask) {
+  return {
+    type: 'CREATE_TASK',
+    payload: newTask
+  };
+}

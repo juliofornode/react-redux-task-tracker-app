@@ -16,6 +16,15 @@ export default function(state=[], action) {
     return state.filter((task) => {
       return (task.taskName !== action.payload);
     });
+  case 'UPDATE_TASK':
+    return state.map(task => {
+      if(task.taskName === action.taskName) {
+        console.log(action.editedTask)
+        return action.editedTask;
+      } else {
+        return task;
+      }
+    });
   default:
     return state;
   }

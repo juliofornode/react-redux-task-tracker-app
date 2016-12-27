@@ -16,7 +16,6 @@ const taskList = [
   },
 ];
 
-
 export function loadTasks() {
   return {
     type: 'LOAD_TASKS',
@@ -43,5 +42,13 @@ export function deleteTask(taskName) {
   return {
     type: 'DELETE_TASK',
     payload: taskName
+  };
+}
+
+export function updateTask(taskName, editedTask) {
+  return {
+    type: 'UPDATE_TASK',
+    taskName: taskName,
+    editedTask: editedTask
   };
 }

@@ -47,7 +47,11 @@
  * Delete action
  * Reducer: filter the state array without the task to delete
 
-
+* Update a task
+ * Display the task in a form: update button sets condition 'editing', that displays UpdateTask component with placeholders
+ * Submit changes
+ * Call updateTask action
+ * Reducer: find the task in the state array and update it
 
 
 

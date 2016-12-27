@@ -23,3 +23,11 @@ export function loadTasks() {
     payload: taskList
   };
 }
+
+export function updateColor(taskName, newColor) {
+  return {
+    type: 'UPDATE_COLOR',
+    taskName: taskName,
+    newColor: newColor
+  };
+}

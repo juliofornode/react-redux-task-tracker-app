@@ -9,9 +9,9 @@ class Task extends Component {
           <div className="container">
             <div className="row">
               <div className="col-md-9">
-                {this.props.nombreTarea}
+                {this.props.taskName} -- {this.props.taskColor}
               </div>
-              <ColorRank colorRank={this.props.colorTarea}/>
+              <ColorRank {...this.props}/>
             </div>
           </div>
 
@@ -22,8 +22,8 @@ class Task extends Component {
 }
 
 Task.propTypes = {
-  nombreTarea: PropTypes.string,
-  colorTarea: PropTypes.string
+  taskName: PropTypes.string,
+  taskColor: PropTypes.string
 };
 
 export default Task;

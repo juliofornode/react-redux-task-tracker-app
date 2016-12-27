@@ -7,22 +7,29 @@ import Task from './Task';
 class TaskList extends Component {
   constructor(props) {
     super(props);
+    this.state = { tasks: [] };
   }
 
   componentDidMount() {
-    this.props.loadTasks();
+    let currentTasks = this.props.loadTasks();
+    this.setState({tasks: currentTasks});
   }
 
   render() {
-    return (
-      <div>
-        <h2>List of tasks:</h2>
-        {this.props.tasks.map(task => {
-          return <Task key={task.taskID} nombreTarea={task.taskName} colorTarea={task.taskColor} />;
-        })}
+    if(!this.state.tasks) {
+      return <p>Loading...</p>;
+    } else {
+      return (
+        <div>
+          <h2>List of tasks:</h2>
+          {this.props.tasks.map(task => {
+            return <Task key={task.taskID} {...task} />;
+          })}
 
-      </div>
-    );
+        </div>
+      );
+    }
+
   }
 }
 
@@ -40,6 +47,5 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
   return bindActionCreators({ loadTasks: loadTasks }, dispatch);
 }
-
 
 export default connect(mapStateToProps, mapDispatchToProps)(TaskList);

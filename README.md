@@ -53,6 +53,9 @@
  * Call updateTask action
  * Reducer: find the task in the state array and update it
 
+* Separate update task functionality
+ * Part one: isolate editing in Component state
+ * Part two: isolate UpdateTask Component
 
 
 

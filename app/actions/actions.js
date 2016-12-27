@@ -38,3 +38,10 @@ export function createTask(newTask) {
     payload: newTask
   };
 }
+
+export function deleteTask(taskName) {
+  return {
+    type: 'DELETE_TASK',
+    payload: taskName
+  };
+}

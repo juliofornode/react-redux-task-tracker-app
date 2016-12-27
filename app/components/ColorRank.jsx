@@ -30,7 +30,7 @@ class ColorRank extends Component {
       return <p>Loading...</p>;
     } else {
       return(
-        <div className="col-md-3">
+        <div className="col-md-3" style={{paddingTop: '10px'}}>
           <svg width="40" height="40">
             <circle cx="20" cy="20" r="19" stroke="gray" strokeWidth="1" fill={this.state.colorSet} />
           </svg>

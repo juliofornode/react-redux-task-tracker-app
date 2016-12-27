@@ -12,6 +12,10 @@ export default function(state=[], action) {
     });
   case 'CREATE_TASK':
     return [...state, action.payload];
+  case 'DELETE_TASK':
+    return state.filter((task) => {
+      return (task.taskName !== action.payload);
+    });
   default:
     return state;
   }

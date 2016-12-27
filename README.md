@@ -43,7 +43,9 @@
  * reducer: add the new task object to state array
 
 * Delete a task
-
+ * Delete button
+ * Delete action
+ * Reducer: filter the state array without the task to delete
 
 
 

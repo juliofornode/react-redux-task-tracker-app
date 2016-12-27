@@ -19,8 +19,8 @@ class ColorRank extends Component {
     const colores = this.state.colors;
     let posicion = colores.indexOf(currentColor);
     if(posicion < colores.length-1 ) {
-      this.setState({ colorSet: colores[posicion + 1] });
       const newColor = colores[posicion + 1];
+      this.setState({ colorSet: newColor });
       const taskName = this.props.taskName;
       this.props.updateColor(taskName, newColor);
     }

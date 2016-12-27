@@ -34,11 +34,11 @@
 * Basic redux implementation: loadTasks action, tasksReducer
 * Basic task status functionality: colored circles and button.
 * Integrate status functionality with redux: update color state.
-** input onChange: update this.state.currentTask with eventObject.target.value
-** form onSubmit: call preventDefault(), call updateTask(currentTask), empty this.state.currentTask
-** updateTask action: map through the state to find the item, then update the color field
+ * input onChange: update this.state.currentTask with eventObject.target.value
+ * form onSubmit: call preventDefault(), call updateTask(currentTask), empty this.state.currentTask
+ * updateTask action: map through the state to find the item, then update the color field
 
-*
+* Create new task
 
 
 

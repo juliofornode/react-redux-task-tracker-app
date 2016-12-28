@@ -1,17 +1,17 @@
 const taskList = [
   {
-    taskID: 0,
-    taskName: 'Interview #0',
-    taskColor: 'red'
-  },
-  {
     taskID: 1,
     taskName: 'Interview #1',
-    taskColor: 'yellow'
+    taskColor: 'red'
   },
   {
     taskID: 2,
     taskName: 'Interview #2',
+    taskColor: 'yellow'
+  },
+  {
+    taskID: 3,
+    taskName: 'Interview #3',
     taskColor: 'green'
   },
 ];
@@ -45,10 +45,12 @@ export function deleteTask(taskName) {
   };
 }
 
-export function updateTask(oldName, newTask) {
+export function updateTask(oldName, newID, newName, newColor) {
   return {
     type: 'UPDATE_TASK',
     oldName: oldName,
-    newTask: newTask
+    newID: newID,
+    newName: newName,
+    newColor: newColor
   };
 }

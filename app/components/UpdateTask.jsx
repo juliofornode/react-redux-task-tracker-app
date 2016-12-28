@@ -12,7 +12,6 @@ class UpdateTask extends Component {
       taskColor: this.props.taskColor
     };
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleChangeID = this.handleChangeID.bind(this);
     this.handleChangeName = this.handleChangeName.bind(this);
     this.handleChangeColor = this.handleChangeColor.bind(this);
     this.noEditar = this.noEditar.bind(this);
@@ -20,12 +19,11 @@ class UpdateTask extends Component {
 
   handleSubmit(eventObject) {
     eventObject.preventDefault();
-    this.props.updateTask(this.props.taskName, this.state);
-  }
-
-  handleChangeID(eventObject) {
-    let nuevaID = eventObject.target.value;
-    this.setState({taskID: nuevaID});
+    let oldName = this.props.taskName;
+    let newID = this.state.taskID;
+    let newName = this.state.taskName;
+    let newColor = this.state.taskColor;
+    this.props.updateTask(oldName, newID, newName, newColor);
   }
 
   handleChangeName(eventObject) {
@@ -51,13 +49,6 @@ class UpdateTask extends Component {
               <div>
                 <form onSubmit={this.handleSubmit} className="form-inline">
                   <div className="form-group">
-                    <input
-                      onChange={this.handleChangeID}
-                      type="text"
-                      value={this.state.taskID}
-                      placeholder={this.state.taskID}
-                      className="form-control">
-                    </input>
                     <input
                       onChange={this.handleChangeName}
                       type="text"
@@ -86,7 +77,6 @@ class UpdateTask extends Component {
 }
 
 UpdateTask.propTypes = {
-  taskID: PropTypes.number,
   taskName: PropTypes.string,
   taskColor: PropTypes.string,
   updateTask: PropTypes.func,

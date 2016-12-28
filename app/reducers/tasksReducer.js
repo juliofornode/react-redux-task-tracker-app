@@ -19,7 +19,11 @@ export default function(state=[], action) {
   case 'UPDATE_TASK':
     return state.map(item => {
       if(item.taskName === action.oldName) {
-        return action.newTask;
+        return {
+          taskID: (action.newID * 11),
+          taskName: action.newName,
+          taskColor: action.newColor
+        };
       } else {
         return item;
       }

@@ -63,6 +63,8 @@
  * if we do not update the task, it results an empty task -- FIXED with "no update button"
  * it does not update the task if we do not change the taskID: this makes it impossible to update a task properly -- FIXED
  with heterodox solution (todo: find the orthodox one).
+ * Found what was causing all the issues: taskID is being used in the TaskList Component as key in the map function. React
+ requires that keys are unique, so it does not allow us to modify the taskID (the unique key) of one item.
 
 
 

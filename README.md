@@ -61,7 +61,8 @@
  * if we do not update the task, editedTask reaches the reducer -- FIXED
  * if we update the task, editedTask does not reach the reducer -- FIXED
  * if we do not update the task, it results an empty task -- FIXED with "no update button"
- * it does not update the task if we do not change the taskID: this makes it impossible to update a task properly
+ * it does not update the task if we do not change the taskID: this makes it impossible to update a task properly -- FIXED
+ with heterodox solution (todo: find the orthodox one).
 
 
 

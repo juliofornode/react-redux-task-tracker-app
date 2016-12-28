@@ -17,11 +17,11 @@ export default function(state=[], action) {
       return (task.taskName !== action.payload);
     });
   case 'UPDATE_TASK':
-    return state.map(task => {
-      if(task.taskName === action.oldName) {
-        return action.editedTask;
+    return state.map(item => {
+      if(item.taskName === action.oldName) {
+        return action.newTask;
       } else {
-        return task;
+        return item;
       }
     });
   default:

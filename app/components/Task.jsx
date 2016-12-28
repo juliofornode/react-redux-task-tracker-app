@@ -13,6 +13,7 @@ class Task extends Component {
     };
     this.handleUpdate = this.handleUpdate.bind(this);
     this.handleDelete = this.handleDelete.bind(this);
+    this.noUpdate = this.noUpdate.bind(this);
   }
 
   handleUpdate() {
@@ -22,6 +23,10 @@ class Task extends Component {
   handleDelete() {
     let taskName = this.props.taskName;
     this.props.deleteTask(taskName);
+  }
+
+  noUpdate() {
+    this.setState({ editing: false });
   }
 
   render() {
@@ -45,7 +50,7 @@ class Task extends Component {
         </div>);
     } else {
       bloque = (
-        <UpdateTask {...this.props}/>
+        <UpdateTask {...this.props} toApp={this.noUpdate}/>
       );
     }
     return(

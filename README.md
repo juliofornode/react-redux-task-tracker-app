@@ -29,6 +29,12 @@
 * Update task
 
 
+# Next steps
+* Improve the updateTask solution.
+* Initial testing with Enzyme.
+
+
+
 # Log
 * Basic components: App, TaskList, Task
 * Basic redux implementation: loadTasks action, tasksReducer
